@@ -1,14 +1,14 @@
-import {
-  Card,
-  ProductImg,
-  Img,
-  Button,
-  ContainerButton,
-  Description,
-  ContainerDescription,
-} from "./style";
+import { Description } from "./style";
 import { useContext } from "react";
 import { CartContext } from "../../providers/Cart/index";
+import {
+  Button,
+  Card,
+  ContainerButton,
+  ContainerDescription,
+  Img,
+  ProductImg,
+} from "../ProductStyles/style";
 
 const Product = ({ product }) => {
   const { addToCart } = useContext(CartContext);

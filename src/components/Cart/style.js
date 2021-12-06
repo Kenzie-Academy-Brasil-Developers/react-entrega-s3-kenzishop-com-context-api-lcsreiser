@@ -11,17 +11,30 @@ export const HomePage = styled.div`
   color: black;
 `;
 
+export const Slogan = styled.h2`
+  text-align: center;
+  padding: 2vh;
+  background: #00cc39;
+  border-radius: 5px 5px 0 0;
+`;
+
 export const Button = styled.button`
   cursor: pointer;
   padding: 10px;
   background-color: #993399;
   color: white;
-  border-radius: 5px;
+  border-radius: 8px;
   font-size: 1.5rem;
   position: absolute;
   right: 0;
   margin-top: 2vh;
   margin-right: 2vh;
+  box-shadow: -10px 5px 5px black;
+
+  &:focus {
+    transform: translate(-5px, 5px);
+    box-shadow: -5px 5px 5px black;
+  }
 `;
 
 export const Main = styled.div`
@@ -39,9 +52,10 @@ export const Ul = styled.ul`
   flex-direction: row;
   justify-content: space-between;
   flex-wrap: wrap;
-  background-color: #f5f5f5;
+  background-color: #ad47ac59;
   padding: 15px;
   width: 100%;
+  border-radius: 0 0 5px 5px;
 `;
 
 export const Info = styled.div`

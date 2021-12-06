@@ -1,31 +1,44 @@
 import styled from "styled-components";
 
-export const Header = styled.div`
+export const Card = styled.li`
+  width: 300px;
   display: flex;
-  flex-direction: row;
-  justify-content: space-between;
-  padding: 10px 15vw;
-  background-color: #993399;
-  color: black;
-`;
-
-export const Main = styled.div`
-  width: 70%;
-  margin: auto;
-`;
-
-export const Ul = styled.ul`
-  list-style: none;
-  display: flex;
-  flex-direction: row;
-  justify-content: space-between;
+  flex-direction: column;
   flex-wrap: wrap;
-  background-color: #ad47ac59;
-  padding: 15px;
+  margin: 10px auto;
+  background-color: white;
+  padding: 10px;
+  border-radius: 10px;
+`;
+
+export const ProductImg = styled.div`
+  text-align: center;
+`;
+
+export const Img = styled.img`
+  width: 100%;
+  height: 184px;
+  border: 1px solid black;
+  border-radius: 5px;
+`;
+
+export const ContainerDescription = styled.div`
+  display: flex;
+  align-items: center;
+  justify-content: space-around;
+  flex-direction: row;
+  margin: 2vh 0;
+`;
+
+export const ContainerButton = styled.div`
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  flex-direction: column;
 `;
 
 export const Button = styled.button`
-  border: 2px solid white;
+  border: 1px solid black;
   border-radius: 3rem;
   font-family: roboto;
   font-size: 20px;

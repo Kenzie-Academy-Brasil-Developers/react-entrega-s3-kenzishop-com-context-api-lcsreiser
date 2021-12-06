@@ -1,6 +1,15 @@
 import { useHistory } from "react-router-dom";
 import CartProduct from "../CartProduct/index";
-import { Container, Main, Ul, Info, Title, HomePage, Button } from "./style";
+import {
+  Container,
+  Main,
+  Ul,
+  Info,
+  Title,
+  HomePage,
+  Button,
+  Slogan,
+} from "./style";
 
 import { useContext } from "react";
 import { CartContext } from "../../providers/Cart/index";
@@ -21,6 +30,7 @@ const Cart = () => {
       </HomePage>
       <Container>
         <Main>
+          <Slogan>É barato se incomodar</Slogan>
           <Ul>
             {cart.map((product, index) => (
               <CartProduct key={index} product={product} actualIndex={index} />

@@ -1,21 +1,32 @@
-import { Card, ProductImg, Img, Button } from "../Product/style";
-
-import { P } from "./style";
+import { Description } from "./style";
 
 import { useContext } from "react";
 import { CartContext } from "../../providers/Cart/index";
+import {
+  Button,
+  Card,
+  ContainerButton,
+  ContainerDescription,
+  Img,
+  ProductImg,
+} from "../ProductStyles/style";
 
 const CartProduct = ({ product, actualIndex }) => {
   const { removeFromCart } = useContext(CartContext);
 
   return (
     <Card>
-      <P>{product.name}</P>
-      <P>R$ {product.price.toFixed(2)}</P>
       <ProductImg>
         <Img src={product.img} alt={product.name} />
       </ProductImg>
-      <Button onClick={() => removeFromCart(actualIndex)}>Remover</Button>
+      <ContainerDescription>
+        <Description>{product.name}</Description>
+        <Description> - </Description>
+        <Description>R$ {product.price.toFixed(2)}</Description>
+      </ContainerDescription>
+      <ContainerButton>
+        <Button onClick={() => removeFromCart(actualIndex)}>Remover</Button>
+      </ContainerButton>
     </Card>
   );
 };
